@@ -32,19 +32,42 @@ section {
     padding: 10rem 12% 10rem;
 }
 
-/* Header */
-.header {
+/* ================= HEADER ================= */
+
+.header{
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 8%;
-    background: rgba(6, 11, 19, 0.75); /* Matching ice-dark transparent blur */
-    backdrop-filter: blur(10px);
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 1400px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+
+    padding: 1.4rem 4%;
+
+    background: rgba(15,15,25,.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 20px rgba(0,255,238,.08),
+        0 8px 30px rgba(0,0,0,.35);
+
+    z-index: 1000;
+
+    transition: .4s ease;
+}
+
+.header:hover{
+    box-shadow:
+        0 0 30px rgba(0,255,238,.18),
+        0 0 60px rgba(0,255,238,.08);
 }
 
 .logo {
