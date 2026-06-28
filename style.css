@@ -1211,3 +1211,49 @@ section{
     }
 
 }
+/* Scroll To Top */
+
+#scroll-top{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:var(--main-color);
+    color:var(--bg-color);
+    font-size:2rem;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+    box-shadow:0 0 20px rgba(56,189,248,.4);
+    z-index:999;
+}
+
+#scroll-top.show{
+    opacity:1;
+    visibility:visible;
+}
+
+#scroll-top:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 30px var(--main-color);
+}
+
+/* Reveal Animation */
+
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
